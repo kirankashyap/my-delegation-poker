@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.get('/createboard', (req,res) => {"
+app.get('/createboard', (req,res) => {
   pool.query('INSERT into BOARD (board_id,title,url) values ("14cb3f8e-714e-463d-98df-4ffa65d20c75","Vivek Board","abc") returning *', (error, results) => {
     if (error) {
       throw error
@@ -25,9 +25,6 @@ app.get('/createboard', (req,res) => {"
   })
   
   
-  
-  
-})
 
 app.listen(port, () => {
   console.log(`Example app listening at ${port}`)

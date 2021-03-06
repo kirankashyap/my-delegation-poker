@@ -7,9 +7,10 @@ app.get('/', (req, res) => {
 })
 
 app.get('/createboard', (req,res) => {
+  var myBoardName=req.query.boardName;
   res.send({
     'boardId': "24",
-    'boardName':"abc"
+    'boardName':myBoardName
   });
 })
 

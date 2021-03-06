@@ -22,7 +22,7 @@ app.get('/createboard', (req,res) => {
     if (error) {
       throw error
     }
-    response.status(200).json(results.rows)
+    res.status(200).json(results.rows)
 })
 })
   

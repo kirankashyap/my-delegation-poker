@@ -10,6 +10,7 @@ const pool = new Pool({
   database: 'api',
   password: '53a1f88bac93164232745d51cb7fc0e86f302fe78f7a801a406cd1f3f313fd52',
   port: 5432,
+  ssl: true
 })
 
 app.get('/', (req, res) => {

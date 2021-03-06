@@ -22,18 +22,10 @@ app.get('/createboard', (req,res) => {
       throw error
     }
     response.status(200).json(results.rows)
-  })
-  
+})
+})
   
 
 app.listen(port, () => {
   console.log(`Example app listening at ${port}`)
 })
-
-
-/*var myBoardName=req.query.boardName;
-  res.send({
-    'boardId': uuidv4(),
-    'boardName':myBoardName
-  });
-  */

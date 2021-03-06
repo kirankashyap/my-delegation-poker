@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/createboard', (req,res) => {
-  pool.query('INSERT into BOARD (board_id,title,url) values ("14cb3f8e-714e-463d-98df-4ffa65d20c75","Vivek Board","abc") returning *', (error, results) => {
+  pool.query("INSERT into BOARD (board_id,title,url) values ('14cb3f8f-714e-463d-98df-4ffa65d20c75','Vivek Board','abc') returning *", (error, results) => {
     if (error) {
       throw error
     }

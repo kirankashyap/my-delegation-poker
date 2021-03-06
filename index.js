@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const port = process.env.PORT
-import { v4 as uuidv4 } from 'uuid';
+const { v4: uuidv4 } = require('uuid');
 
 app.get('/', (req, res) => {
   res.send('Hello World!')

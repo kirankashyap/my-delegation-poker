@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const port = process.env.PORT
+import { v4 as uuidv4 } from 'uuid';
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
@@ -9,7 +10,7 @@ app.get('/', (req, res) => {
 app.get('/createboard', (req,res) => {
   var myBoardName=req.query.boardName;
   res.send({
-    'boardId': "24",
+    'boardId': uuidv4(),
     'boardName':myBoardName
   });
 })
